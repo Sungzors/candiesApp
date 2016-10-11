@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Candy App</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="stylesheets/main.css" /></head>
+<body>
+	
+	<div class="container">
+        <h1>
+		    <a target="_blank" href="https://www.youtube.com/watch?v=mKli0y-Xr-Q">Candy Shoppe</a>
+	    </h1>
+
+        <table class= "table table-hover">
+            <tr style = "color:red">
+                <th>Candy Name</th>
+                <th>Candy Color</th> 
+                <th>Candy Qty</th>
+            </tr>
+
+
+        <% for (var i = 0; i <candies.length; i++) { %>
+            <tr>
+                <th><%= candies[i].name %></th>
+                <th><%= candies[i].color %></th> 
+                <th><%= candies[i].qty %></th>
+            </tr> 
+        <% } %>
+
+        </table>
+
+        <% include ./partials/form %>
+	</div>
+
+</body>
+</html>
